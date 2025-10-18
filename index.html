@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <title>Cambrussi Bross</title>
+
+  <!-- Google Fonts: tipografia de game -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Título/brand (sem fundo branco, tipografia gamer vermelha) -->
+  <div class="brand" aria-label="Título do jogo">Cambrussi Bross</div>
+
+  <!-- HUD e ajuda -->
+  <div class="hud" id="hud">Carregando…</div>
+  <div class="help">
+    Controles: <kbd>A</kbd>/<kbd>←</kbd> · <kbd>D</kbd>/<kbd>→</kbd> · <kbd>W</kbd>/<kbd>↑</kbd>/<kbd>Espaço</kbd> · <kbd>R</kbd>
+  </div>
+
+  <!-- Overlays -->
+  <div class="overlay" id="overlay"><div class="box"></div></div>
+
+  <!-- Jogo -->
+  <div class="wrap">
+    <canvas id="game" width="960" height="540" tabindex="0" aria-label="Jogo Cambrussi Bross"></canvas>
+  </div>
+
+  <!-- Controles de toque (mobile) -->
+  <div class="touch-controls" aria-label="Controles de toque">
+    <div class="tc-left">
+      <button class="tc-btn" data-key="a" aria-label="Esquerda">◄</button>
+      <button class="tc-btn" data-key="d" aria-label="Direita">►</button>
+    </div>
+    <div class="tc-right">
+      <button class="tc-btn big" data-key="jump" aria-label="Pular">⤴</button>
+      <button class="tc-btn" data-key="r" aria-label="Reiniciar">↻</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
