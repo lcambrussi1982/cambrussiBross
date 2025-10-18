@@ -99,3 +99,8 @@ canvas:focus{outline:2px solid rgba(255,255,255,.6);outline-offset:2px}
   .brand{ font-size: clamp(16px, 4.2vw, 26px) }
 }
 @media (prefers-reduced-motion: reduce){ .overlay{ transition:none } }
+
+/* Esconde as instruções de teclado em dispositivos touch */
+@media (pointer: coarse) {
+  .help { display: none !important; }
+}
