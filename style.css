@@ -104,3 +104,16 @@ canvas:focus{outline:2px solid rgba(255,255,255,.6);outline-offset:2px}
 @media (pointer: coarse) {
   .help { display: none !important; }
 }
+/* Use unidades de viewport modernas para não “cortar” em mobile */
+.wrap{
+  /* fallbacks + modernos */
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+
+/* Landscape muito baixo: encolhe os botões para abrir mais chão */
+@media (orientation: landscape) and (max-height: 480px){
+  .tc-btn{ width:52px; height:52px; font-size:20px; }
+  .tc-btn.big{ width:60px; height:60px; font-size:22px; }
+}
